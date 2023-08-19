@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login instagram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="./bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body data-bs-theme="light">
+    
+    <div class="container  pt-4">
+
+        <div class="row justify-content-center ">
+            <div class="col-13  col-md-8 col-lg-5 ">
+
+                <form class="m-auto   border d-flex flex-column form-select-sm align-items-center  p-3 my-3 "
+                    novalidate>
+                    <span style="font-family: 'Lobster Two', cursive;" class="h1">Instgram</span>
+                    
+
+                    <div class="input-group mb-3">
+
+                        <!-- <span class="input-group-text">@</span> -->
+                        <div class="form-floating  w-75 ">
+
+                            <input type="email" class="form-control was-validated shadow-none form-select-sm bg-light"
+                                name="" id="email" aria-describedby="emailHelpId" placeholder="abc@mail.com" required
+                                pattern="^([a-zA-Z0-9]|\.|_){5,25}@[a-zA-Z]{3,9}\.[a-zA-Z]{3,9}$">
+                            <label for="email" class="form-label text-small ">Email</label>
+                            <div class="invalid-feedback">Email Not found</div>
+                        </div>
+                    </div>
+                    
+
+
+                    <div class="input-group mb-3">
+
+                        <div class="form-floating w-75 mb-3 ">
+                            <input type="password" class="form-control shadow-none bg-light" id="Password"
+                                placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$">
+                            <label for="floatingPassword">Password</label>
+                            <div class="invalid-feedback ">Password Not Accept</div>
+                        </div>
+                    </div>
+                    
+                  
+                  
+
+                    <input type="submit" class="btn btn-primary btn-sm w-75" value="login">
+
+                        <div id="formMs" class="text-danger"></div>
+                </form>
+                    <div class="card text-center py-3">Don't have an account? <a href="signup.html" target="_parent">Sign up</a></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./login.js" type="module"></script>
+    
+</body>
+
+</html>

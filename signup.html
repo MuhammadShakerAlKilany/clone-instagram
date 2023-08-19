@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up instagram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="./bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body data-bs-theme="light">
+
+    <div class="container  pt-4">
+
+        <div class="row justify-content-center ">
+            <div class="col-12 col-lg-6 col-md-8 ">
+
+                <form class="m-auto   border d-flex flex-column form-select-sm align-items-center  p-3 my-3 "
+                    novalidate>
+                    <span style="font-family: 'Lobster Two', cursive;" class="h1">Instgram</span>
+                    <span class="text-dark fs-5 w-75 text-center">Sign up to see photos and videos from your
+                        friends.</span>
+
+                    <div class="input-group mb-3">
+
+                        <!-- <span class="input-group-text">@</span> -->
+                        <div class="form-floating  w-75 ">
+
+                            <input type="email" class="form-control  shadow-none form-select-sm bg-light"
+                                name="" id="email" aria-describedby="emailHelpId" placeholder="abc@mail.com" required
+                                pattern="^([a-zA-Z0-9]|\.|_){5,25}@[a-zA-Z]{3,9}\.[a-zA-Z]{3,9}$">
+                            <label for="email" class="form-label text-small ">Email</label>
+                            <div class="invalid-feedback">Email Not Accept</div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+
+                        <div class="form-floating  w-75 mb-3  ">
+                            <input type="text" class="form-control  shadow-none form-select-sm  bg-light" name=""
+                                id="userName" aria-describedby="userNameHelpId" placeholder="User Name" required
+                                pattern="^([a-zA-Z0-9]|_){5,20}$">
+                            <label for="userName" class="form-label text-small">User Name</label>
+                            <div class="invalid-feedback">User Name 5 to 20 letter or number or Underscore , No special
+                                character</div>
+                        </div>
+                    </div>
+
+
+                    <div class="input-group mb-3">
+
+                        <div class="form-floating w-75 mb-3 ">
+                            <input type="password" class="form-control shadow-none bg-light" id="Password"
+                                placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$">
+                            <label for="floatingPassword">Password</label>
+                            <div class="invalid-feedback ">Password More than 8 capital , small letter and number ,
+                                special character ,<br> not equal User Name</div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+
+                        <div class="form-floating w-75 mb-3 ">
+                            <input type="password" class="form-control shadow-none bg-light " id="PasswordRepeat"
+                                placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$">
+                            <label for="floatingPassword">Repeat Password</label>
+                            <div class="invalid-feedback">Password must equal Repeat Password and Password must valid
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control shadow-none " id="formFile" type="file" accept="image/png, image/jpeg" required>
+                    </div>
+                    <span class="text-center w-75 mb-2">People who use our service may have uploaded your contact
+                        information to Instagram.<a
+                            href="https://l.instagram.com/?u=https%3A%2F%2Fwww.facebook.com%2Fhelp%2Finstagram%2F261704639352628&e=AT2_kKP2SgjGOGa8oF-MvEp-nwM7VnJpJg7I-7Ip69CMdu4DT5H7xrXbnFNUXR9CekZI_iTCZ4-yefrX1H4rH-wgltJ7mwtN0gKkb1z6tGD_7EKKIkKEBG1jO40R01EJvP68I9biI1euAvq764lt9A">Learn
+                            More</a> </span>
+
+                    <span class="text-center w-75 mb-2"> By signing up, you agree to our<a
+                            href="https://help.instagram.com/581066165581870/?locale=en_US">Terms</a> ,<a
+                            href="https://l.instagram.com/?u=https%3A%2F%2Fwww.facebook.com%2Fprivacy%2Fpolicy&e=AT2_kKP2SgjGOGa8oF-MvEp-nwM7VnJpJg7I-7Ip69CMdu4DT5H7xrXbnFNUXR9CekZI_iTCZ4-yefrX1H4rH-wgltJ7mwtN0gKkb1z6tGD_7EKKIkKEBG1jO40R01EJvP68I9biI1euAvq764lt9A">Privacy
+                            Policy</a> and <a href="https://www.instagram.com/legal/cookies/">Cookies Policy</a>
+                        .</span>
+
+                    <input type="submit" class="btn btn-primary btn-sm w-75" value="Sign up">
+
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./signup.js" type="module"></script>
+    
+</body>
+
+</html>

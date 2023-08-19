@@ -1,0 +1,207 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagram</title>
+    <!-- <link href="./bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <style>
+        .img-icon-hover {
+            width: 2rem;
+            
+        }
+
+        .icon-btn {
+            height: 2rem;
+        }
+    </style>
+</head>
+
+<body data-bs-theme="dark" class=" w-100">
+    <div class="navbar navbar-expand-lg p-2 d-sm-none position-fixed  w-100 bg-body  z-3 border-bottom">
+        <div class="navbar-brand  " style="font-family: 'Lobster Two', cursive;">Instagram</div>
+        <div>
+            <button type="button" class="w-100 btn " id="" data-bs-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse"> <i
+                class="fa-solid fa-bars"></i><span class="ms-2">More</span>
+        </button>
+        <div class="collapse" id="collapse" class="d-flex flex-column collapse collapse-horizontal ">
+            <input class="btn border  p-1 w-100 d-flex justify-content-center my-2" id="modNav" type="button" value="Mod">
+            <input class="btn border  p-1 w-100 d-flex justify-content-center" id="logOutNav" type="button" value="log out">
+        </div>
+        </div> 
+    </div>
+    <div style="height: 3.5rem;" class="d-sm-none" ></div>
+    <main class="container-fluid " >
+        <div class="row h-100  ">
+                <div class="col-lg-2 col-1 border-end d-sm-block d-none">
+
+                    <nav class="   position-fixed "  id="sideBar">
+                        <div class="row fs-3 mt-4  " style="font-family: 'Lobster Two', cursive;">
+                            <p class="mx-lg-3 mx-2" style="cursor: pointer;"><i 
+                                    class="fa-brands fa-instagram d-lg-none fs-1 "></i><span
+                                    class="d-lg-block d-none">Instagram</span></p>
+        
+                        </div>
+                        <div class=" d-flex  justify-content-between flex-column ">
+        
+                            <div class="btn-group-vertical w-100  ">
+                                <button type="button "><i class="fa-solid fa-house "></i>
+                                    <span>Home</span> </button>
+                                <button type="button"><i class="fas fa-search"></i>
+                                    <span> Search</span> </button>
+                                <button type="button"><i class="fas fa-compass "></i>
+                                    <span> Explore</span> </button>
+                                <button type="button"> <i class="fa-solid fa-clapperboard "></i> <span> Reels</span></button>
+                                <button type="button"><i class="fab fa-facebook-messenger"></i> <span>Messages </span> </button>
+                                <button type="button"><i class="fa-regular fa-heart fs-4 "style=""></i><span>Notifications</span></button>
+                                <button type="button" id="buttonCreate"><i class="fa-regular fa-square-plus"></i><span> Create</span></button>
+                                <button type="button"> <img id="imgProfile"
+                                        src="https://images.pexels.com/photos/1557652/pexels-photo-1557652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                        style="width:1.5rem; height: 1.5rem;" class="rounded-circle"><span>
+                                        Profile</span></button>
+        
+        
+                            </div>
+                            <div style="height: 50px;"></div>
+                            <div class="position-relative"><button type="button" class="w-100 " id="" data-bs-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse"> <i
+                                        class="fa-solid fa-bars"></i><span>More</span>
+                                </button>
+                                <div class="collapse" id="collapse" class="d-flex flex-column ">
+                                    <input class="btn border  p-1 w-100 d-flex justify-content-center my-2" id="mod" type="button" value="Mod">
+                                    <input class="btn border  p-1 w-100 d-flex justify-content-center" id="logOut" type="button" value="log out">
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            <div class="col-lg-10 col-sm-11 col-12  pt-4 pe-0 ps-0 ">
+                <div class="row w-100">
+                    <div class="col-lg-9 col-12 row justify-content-center">
+
+                        <section class="col-lg-7 col-md-8 col-10" id="postsSection">
+    
+                            
+                            <!-- <div class=" w-100  pb-3 mx-auto card border-top-0  border-start-0  border-end-0">
+                                <h4 class="card-title">
+                                    <article class="d-flex my-2 "><img
+                                            src="https://images.pexels.com/photos/1557652/pexels-photo-1557652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                            style="width:44px; height: 44px;" class="rounded-circle">
+                                        <span style="font-size:14px;" class="ms-0 align-self-center">
+                                            <p class=" mb-0  ms-1 text-center">Muhammed</p>
+                                        </span> <button class="btn btn-link  "
+                                            style="text-decoration: none;font-size: 12px;">follow</button>
+                                    </article>
+                                </h4>
+                                <img class=" card-img mb-3 " src="./pexels-daniel-jurin-1835718.jpg" height="300px" alt="Title">
+                                    <div class="fs-5 d-flex justify-content-between"><div><i class="fa-regular fa-message"></i> <i class="fa-regular fa-heart "></i> <i class="fa-regular fa-paper-plane"></i></div> <i class="fa-regular fa-bookmark"></i></div>
+                                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
+                                    aliquam sint cumque nemo error? Officia possimus excepturi ullam placeat adipisci alias
+                                    quibusdam laudantium deleniti! Rem reiciendis porro amet praesentium quidem.</p>
+                            </div> -->
+                           
+                            
+                        </section>
+                    </div>
+
+                    <div class="col-lg-3 d-lg-block d-none">
+                        <div class="top-0" id="userSuggestion">
+                            <!-- <article class="d-flex my-2 ">
+                                <img
+                                    src="https://images.pexels.com/photos/1557652/pexels-photo-1557652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                    style="width:44px; height: 44px;" class="rounded-circle">
+                                <span style="font-size:14px;" class="ms-0 align-self-end w-50">
+                                    <p class=" mb-0  ms-1">Muhammed</p>
+                                    <p class="  text-muted mb-0 ms-1">Muhammed</p>
+                                </span> <button class="btn btn-link position-relative  "
+                                    style="text-decoration: none;font-size: 12px; ">follow</button>
+                            </article> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <div class="position-fixed  d-none top-0 m-0 p-0 vw-100 vh-100" id="bgAdd" >
+        <div class="position-relative ">
+            <div class="d-flex h-100 w-100 align-items-center z-3">
+
+                <div class="row h-75 w-100 justify-content-center  ">
+    
+                    <form class="col-lg-5 bg-body card position-relative col-8 offset-1 offset-lg-0" id="formAddPost" novalidate >
+                        <span  class="card-title border-bottom text-center"> Create new post</span>
+                        <div class="mb-3 d-flex flex-column align-items-center ">
+                            <label for="formFileSm" class="form-label">Add img</label>
+                            <input class="form-control form-control-sm" id="formFileSm" type="file" accept="image/png, image/jpeg" required>
+                            <div class="invalid-feedback">Img required png or jpeg</div>
+                          </div>
+                          <div class="form-floating h-50">
+                              <textarea class="form-control h-75 shadow-none " placeholder="caption" id="formAddControlTextarea1" rows="3" style="resize: none;" minlength="10"  required></textarea>
+                              <label for="formAddControlTextarea1" class="form-label">caption</label>
+                              <div class="invalid-feedback">Caption required 10 letter</div>
+                          </div>
+                          <input class=" " type="submit" id="submitAdd">
+                      </form>
+                </div>
+            </div>
+            <div class="position-absolute z-n1  vw-100 vh-100 top-0 opacity-25 bg-black">
+
+            </div> 
+        
+        
+
+             
+         
+        </div>
+    </div>
+        <script src="./home.js" type="module"></script>
+        
+        
+        <footer class="navbar navbar-expand-lg p-2 d-sm-none position-fixed bottom-0  w-100 bg-body  z-3 border-bottom">
+            <nav class=""  id="sideBar">
+            
+            <div class="d-flex">
+
+                
+                    <button type="button" class="position-relative me-5 " ><i class="fa-solid fa-house "></i>
+                         </button>
+                    <button type="button" class="position-relative me-5" ><i class="fas fa-search"></i>
+                         </button>
+                    <button type="button" class="position-relative me-5" ><i class="fas fa-compass "></i>
+                         </button>
+                    <button type="button" class="position-relative me-5" > <i class="fa-solid fa-clapperboard "></i> </button>
+                    <button type="button" class="position-relative me-5" ><i class="fab fa-facebook-messenger"></i>  </button>
+                    <button type="button" class="position-relative me-5" ><i class="fa-regular fa-heart fs-4 "style=""></i></button>
+                    <button type="button"  class="position-relative me-5" id="buttonCreateFooter"><i class="fa-regular fa-square-plus "></i></button>
+                    
+
+
+                
+              
+        </nav></footer>
+        <script>
+            
+
+            $(document).ready(function(){
+                $("#logOut,#logOutNav").click(function(){
+                    localStorage.removeItem("user_Id")
+                    location.replace("login.html")
+                })
+            })
+        </script>
+    </body>
+
+</html>
