@@ -17,12 +17,12 @@ $("form").on("submit", async function (event) {
                 data.append("password",$("#Password").val())
             
              const userData =  await ajax("/api/v1/users/login",data)
-                $("#submitButton").html(`login`).prop('disabled', false);
              console.log(userData)
              if(userData._id){
                 localStorage.setItem("user_Id",userData._id)
                 location.replace("home.html")
              }else{
+                $("#submitButton").html(`login`).prop('disabled', false);
                 $("#formMs").html("Email or Password is rong")
              }
             
