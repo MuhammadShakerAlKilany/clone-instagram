@@ -207,8 +207,10 @@ if(append){
         event.preventDefault()
         event.stopPropagation()
         console.log(this.checkValidity())
+        
         if (this.checkValidity()) {
-
+            $("#submitAdd").html(`<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Loading...
+        `).prop('disabled', true);
             const data = new FormData()
             data.append("userId", user_Id)
             data.append("caption", $("#formAddControlTextarea1").val())
@@ -222,6 +224,7 @@ if(append){
             conroler()
             // console.log($("#formFileSm").prop('files')[0])
             // console.log(newPostData)
+            $("#submitAdd").html(`login`).prop('disabled', false);
              $("#bgAdd").removeClass("d-block").addClass("d-none")
         }
 

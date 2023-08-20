@@ -7,6 +7,8 @@ $("form").on("submit", async function (event) {
             this.classList.add('was-validated')
             $("#formMs").html("")
     }else if(this.checkValidity()){
+        $("#submitButton").html(`<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Loading...
+        `).prop('disabled', true);
         $("#formMs").html("")
         this.classList.remove('was-validated')
                 const data = new FormData()
@@ -15,7 +17,7 @@ $("form").on("submit", async function (event) {
                 data.append("password",$("#Password").val())
             
              const userData =  await ajax("/api/v1/users/login",data)
-
+                $("#submitButton").html(`login`).prop('disabled', false);
              console.log(userData)
              if(userData._id){
                 localStorage.setItem("user_Id",userData._id)
@@ -23,6 +25,7 @@ $("form").on("submit", async function (event) {
              }else{
                 $("#formMs").html("Email or Password is rong")
              }
+            
              
 
     }

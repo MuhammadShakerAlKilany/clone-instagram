@@ -36,6 +36,9 @@ $(document).ready(function () {
         event.preventDefault()
         event.stopPropagation()
         if(this.checkValidity()){
+            $("#submitButton").html(`<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Loading...
+        `).prop('disabled', true);
+        this.classList.remove('was-validated')
             const data = new FormData()
             data.append("userName",$("#userName").val())
             data.append("email",$("#email").val())
@@ -44,17 +47,22 @@ $(document).ready(function () {
             try{
 
                 const newUserData =  await ajax("/api/v1/users",data,"post",true )
+                $("#submitButton").html(`login`).prop('disabled', false);
                 console.log(newUserData.ms=="email not accepted")
                 if(newUserData.ms=="email not accepted"){
                      $("#email").addClass("is-invalid")
+                }else{
+                    
+                    localStorage.setItem("user_Id",newUserData._id)
+                  location.replace("home.html")
                 }
                 console.log(newUserData)
-                localStorage.setItem("user_Id",newUserData._id)
-                location.replace("home.html")
             }catch(err){
                 console.log(err)
                    
             }
+        }else{
+            this.classList.add('was-validated')
         }
 
             
@@ -62,7 +70,7 @@ $(document).ready(function () {
             // console.log($("#formFile").prop('files')[0])
             // console.log(newUserData)
           
-        this.classList.add('was-validated')
+        
 
     })
     $("#repeatPasswordEye i, #PasswordEye i").click(function(){
