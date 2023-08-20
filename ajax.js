@@ -1,4 +1,4 @@
-export const url = "http://instagramapi.mhmdlkylny.repl.co"
+export const url = "https://instagramapi.mhmdlkylny.repl.co"
 export  async function ajax(path,data=false,method="get"){
     let res
   if(data){
