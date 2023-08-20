@@ -63,6 +63,17 @@ $(document).ready(function () {
             // console.log(newUserData)
           
         this.classList.add('was-validated')
+
     })
+    $("#repeatPasswordEye i, #PasswordEye i").click(function(){
+        $(this).toggleClass("fa-eye fa-eye-slash")
+       console.log($(this).parent().siblings().children('input').attr("type",function(i,type){
+
+        type = type=="password"?"text":"password";
+        return type
+
+       })) 
+    })
+
 })
 

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up instagram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
@@ -36,18 +39,21 @@
                     <div class="input-group mb-3">
 
                         <!-- <span class="input-group-text">@</span> -->
-                        <div class="form-floating  w-75 ">
+                        <div class=" input-group has-validation  ">
+                            <div class="form-floating w-75">
 
-                            <input type="email" class="form-control  shadow-none form-select-sm bg-light"
-                                name="" id="email" aria-describedby="emailHelpId" placeholder="abc@mail.com" required
+                                <input type="email" class="form-control  shadow-none form-select-sm bg-light" name=""
+                                id="email" aria-describedby="emailHelpId" placeholder="abc@mail.com" required
                                 pattern="^([a-zA-Z0-9]|\.|_){5,25}@[a-zA-Z]{3,9}\.[a-zA-Z]{3,9}$">
-                            <label for="email" class="form-label text-small ">Email</label>
-                            <div class="invalid-feedback">Email Not Accept</div>
+                                <label for="email" class="form-label text-small ">Email</label>
+                                <div class="invalid-feedback" for="email">Email Not Accept</div>
+                                </div>
+                                <span class="input-group-text" style="max-height: 3.7rem;" id="inputGroupPrepend">@</span>
                         </div>
                     </div>
                     <div class="input-group mb-3">
 
-                        <div class="form-floating  w-75 mb-3  ">
+                        <div class="form-floating  w-75 mb-1  ">
                             <input type="text" class="form-control  shadow-none form-select-sm  bg-light" name=""
                                 id="userName" aria-describedby="userNameHelpId" placeholder="User Name" required
                                 pattern="^([a-zA-Z0-9]|_){5,20}$">
@@ -60,27 +66,36 @@
 
                     <div class="input-group mb-3">
 
-                        <div class="form-floating w-75 mb-3 ">
-                            <input type="password" class="form-control shadow-none bg-light" id="Password"
-                                placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$">
-                            <label for="floatingPassword">Password</label>
-                            <div class="invalid-feedback ">Password More than 8 capital , small letter and number ,
-                                special character ,<br> not equal User Name</div>
+                        <div class=" mb-0 input-group ">
+                            <div class="form-floating w-75">
+
+                                <input type="password" class="form-control shadow-none bg-light " id="Password"
+                                    placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$">
+                                <label for="floatingPassword">Password</label>
+                                <div class="invalid-feedback ">Password More than 8 capital , small letter and number ,
+                                    special character ,<br> not equal User Name</div>
+                            </div>
+                            <span class="input-group-text"  id="PasswordEye" style="max-height: 3.7rem;"><i class="fa-solid fa-eye " style="cursor: pointer;"></i></span>
                         </div>
                     </div>
                     <div class="input-group mb-3">
 
-                        <div class="form-floating w-75 mb-3 ">
-                            <input type="password" class="form-control shadow-none bg-light " id="PasswordRepeat"
-                                placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$">
-                            <label for="floatingPassword">Repeat Password</label>
-                            <div class="invalid-feedback">Password must equal Repeat Password and Password must valid
+                        <div class=" mb-3 input-group  ">
+                            <div class="form-floating w-75">
+
+                                <input type="password" class="form-control shadow-none bg-light " id="PasswordRepeat"
+                                    placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$">
+                                <label for="floatingPassword">Repeat Password</label>
+                                <div class="invalid-feedback">Password must equal Repeat Password and Password must valid
+                                </div>
                             </div>
+                            <span class="input-group-text" id="repeatPasswordEye" style="max-height: 3.7rem;"><i class="fa-solid fa-eye "  style="cursor: pointer;"></i></span>
 
                         </div>
                     </div>
                     <div class="mb-3">
-                        <input class="form-control shadow-none " id="formFile" type="file" accept="image/png, image/jpeg" required>
+                        <input class="form-control shadow-none " id="formFile" type="file"
+                            accept="image/png, image/jpeg" required>
                     </div>
                     <span class="text-center w-75 mb-2">People who use our service may have uploaded your contact
                         information to Instagram.<a
@@ -99,9 +114,9 @@
             </div>
         </div>
     </div>
-    
+
     <script src="./signup.js" type="module"></script>
-    
+
 </body>
 
 </html>
