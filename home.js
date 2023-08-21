@@ -6,9 +6,10 @@ if (!user_Id) {
     location.replace("login.html")
 } 
 $(document).ready(function () {
-    pushPosts()
-    async function pushPosts() {
-
+    // pushPosts()
+    (async function pushPosts() {
+        document.body.dataset.bsTheme = localStorage.getItem("mod") ||"dark";
+        
         const data = await ajax("/api/v1/posts") || []
         const users = await ajax("/api/v1/users") || []
      
@@ -46,7 +47,7 @@ $(document).ready(function () {
            
         })
          
-    }
+    })()
     function conroler(){
         $("[data-islove]").each(function(){
                    
@@ -169,6 +170,7 @@ if(append){
     //     "./icons/lightCreate.svg", "https://images.pexels.com/photos/1557652/pexels-photo-1557652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"]
     $("#mod,#modNav").click(function () {
         document.body.dataset.bsTheme = document.body.dataset.bsTheme == "dark" ? "light" : "dark";
+        localStorage.setItem("mod",document.body.dataset.bsTheme)
         // switchModColoer(document.body.dataset.bsTheme)
 
     })
